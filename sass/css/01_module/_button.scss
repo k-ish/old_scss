@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+//ボタン関連のモジュール
+//div.btn-block>a.btn-child>span{button}
+
+
+//simple button
+//block
+@mixin btn-block($width,$pdding:1em){
+	box-sizing: border-box;
+	width: $width;
+	padding-left: $pdding;
+	padding-right: $pdding;
+}
+@mixin btn-block-size($width,$pdding:1em){
+	box-sizing: border-box;
+	width: $width;
+	padding-left: $pdding;
+	padding-right: $pdding;
+}
+
+	//child
+	@mixin btn-child(){
+		display: block;
+		width: 100px;
+		text-align: center;
+	}
+
+
+	//skin
+	@mixin btn-child-color($color ,$color-bg){
+		color: $color;
+		background-color: $color-bg;
+	}

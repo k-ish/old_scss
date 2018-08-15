@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+//余白調整クラスの生成
+
+//trueにした変数がクラス化される
+$make-margin-top: false !default;        
+$make-margin-bottom: false !default;        
+$make-margin-right: false !default;        
+$make-margin-left: false !default;        
+$make-padding-top: false !default;       
+$make-padding-bottom: false !default;       
+$make-padding-right: false !default;       
+$make-padding-left: false !default;       
+
+//クラス名のプリフィックスを指定
+$prefix-margin: m;
+$prefix-padding: p;
+$prefix-top: t_;
+$prefix-bottom: b_;
+$prefix-right: r_;
+$prefix-left: l_;
+
+//!important不要な場合はnull。
+//必要な場合は⇢" !important"(半角もスペースも含む)
+$has-important: null !default;
+
+//クラス生成数の定義（余白値は5ずつ増える）
+$endValue: 10 !default;
+
+
+@if $make-margin-top {
+    @for $i from 0 through $endValue {
+        .#{$prefix-margin}#{$prefix-top}#{$i * 5} {
+            margin-top: $i * 5px#{$has-important};
+        }
+    }
+}
+
+@if $make-margin-bottom {
+    @for $i from 0 through $endValue {
+        .#{$prefix-margin}#{$prefix-bottom}#{$i * 5} {
+            margin-bottom: $i * 5px#{$has-important};
+        }
+    }
+}
+
+@if $make-margin-right {
+    @for $i from 0 through $endValue {
+        .#{$prefix-margin}#{$prefix-right}#{$i * 5} {
+            margin-right: $i * 5px#{$has-important};
+        }
+    }
+}
+
+@if $make-margin-left {
+    @for $i from 0 through $endValue {
+        .#{$prefix-margin}#{$prefix-left}#{$i * 5} {
+            margin-left: $i * 5px#{$has-important};
+        }
+    }
+}
+
+
+@if $make-padding-top {
+    @for $i from 0 through $endValue {
+        .#{$prefix-padding}#{$prefix-top}#{$i * 5} {
+            padding-top: $i * 5px#{$has-important};
+        }
+    }
+}
+
+@if $make-padding-bottom {
+    @for $i from 0 through $endValue {
+        .#{$prefix-padding}#{$prefix-bottom}#{$i * 5} {
+            padding-bottom: $i * 5px#{$has-important};
+        }
+    }
+}
+
+@if $make-padding-right {
+    @for $i from 0 through $endValue {
+        .#{$prefix-padding}#{$prefix-right}#{$i * 5} {
+            padding-right: $i * 5px#{$has-important};
+        }
+    }
+}
+
+@if $make-padding-left {
+    @for $i from 0 through $endValue {
+        .#{$prefix-padding}#{$prefix-left}#{$i * 5} {
+            padding-left: $i * 5px#{$has-important};
+        }
+    }
+}
+
+
+

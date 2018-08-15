@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+//テキストカラーのクラス生成
+//生成したい色の値とクラス名プリフィックスを指定
+$uk-color-set: ( red: #f00,
+green: #0f0,
+blue: #00f,
+);
+
+//trueならクラスを生成、falseなら生成しない
+$make-uk-text-color: false;
+
+//$uk-color-setの値を全てクラス化
+@if $make-uk-text-color {
+	@each $name,
+	$color in $uk-color-set {
+		.color_#{$name} {
+			color: $color;
+		}
+	}
+}
+
+
+
+//フォントウェイトのクラス生成
+//生成したいウェイトのクラス名プリフィックスを指定
+$uk-weight-set: ( 
+	normal: normal,
+	bold: bold,
+	lighter:lighter,
+	bolder:bolder,
+);
+
+//trueならクラスを生成、falseなら生成しない
+$make-uk-weight-set: false;
+
+//$uk-weight-setの値を全てクラス化
+@if $make-uk-weight-set {
+	@each $name,
+	$weight in $uk-weight-set {
+		.fo_#{$name} {
+			font-weight: $weight;
+		}
+	}
+}
+

@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+//true ならクラスを生成、false なら生成しない
+$make-text-color: false;
+$make-text-weight: false;
+$make-text-align: false;
+
+
+
+@if $make-text-color {	
+	@each $name, $color in $clr-list {
+		.tx-#{$name} {
+			color: $color;
+		}
+	}
+	@each $key, $value in $breakpoint-down {		
+		@media #{$value} {
+			@each $name, $color in $clr-list {
+				.tx-#{$name}-#{$key} {
+					background-color: $color;
+				}
+			}
+		}
+	}
+}
+
+@if $make-text-weight {	
+	@each $name, $weight in $font-weight {
+		.tx-#{$name} {
+			font-weight: $weight;
+		}
+	}
+	@each $key, $value in $breakpoint-down {		
+		@media #{$value} {
+			@each $name, $weight in $font-weight {
+				.tx-#{$name}-#{$key} {
+					font-weight: $weight;
+				}
+			}
+		}
+	}
+}
+
+@if $make-text-align {	
+	@each $name, $align in $text-align {
+		.tx-#{$name} {
+			text-align: $align;
+		}
+	}
+	@each $key, $value in $breakpoint-down {		
+		@media #{$value} {
+			@each $name, $align in $text-align {
+				.tx-#{$name}-#{$key} {
+					text-align: $align;
+				}
+			}
+		}
+	}
+}
+
+
+@each $name, $color in $clr-list {
+		.bg-#{$name} {
+			background-color: $color;
+		}
+	}
+	@each $key, $value in $breakpoint-down {		
+		@media #{$value} {
+			@each $name, $color in $clr-list {
+				.bg-#{$name}-#{$key} {
+					background-color: $color;
+				}
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+

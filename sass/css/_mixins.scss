@@ -1,0 +1,25 @@
+@charset "utf-8";
+// Utilities
+// // Components
+// // Skins
+// // Layout
+
+//sassユーティリティ
+@import "00_utility/clearfix";
+@import "00_utility/size";
+@import "00_utility/text";
+@import "00_utility/hover";
+
+//UI関連の雛形
+@import "01_module/heading";
+@import "01_module/card";
+@import "01_module/button";
+
+//初期構築のテンプレート
+@import "02_template/setting";
+@import "02_template/layout";
+@import "02_template/context";
+
+//PUK初期構築のテンプレート
+@import "03_puk/font";
+@import "03_puk/space";

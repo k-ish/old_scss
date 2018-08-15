@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+//title_BLOCK
+//h2.this
+@mixin ttl () {
+	font-size: 18px;
+	line-height: 1em;
+	font-weight: bold;
+	color: darkblue;
+	text-align: left;
+	letter-spacing: 0.02em
+}
+
+	//装飾
+	//左線
+	@mixin ttl-borderLeft ($cl:blue) {
+		padding-left: 1em;
+		border-left: 3px solid $cl ;
+	}
+	//下線
+	@mixin ttl-borderBottom ($cl:blue) {
+		padding-bottom: .2em;
+		border-bottom: 3px solid $cl ;
+	}
+
+//title_ELEMENT
+
+	//サブタイトル	//h2>span[title]+span.this[subtitle]
+	@mixin ttl_subtitle-right () {
+		display: inline-block;
+		font-size: .875rem;
+		margin-left: 2em;
+	}
+	@mixin ttl_subtitle-bottom () {
+		font-size: .875rem;
+		margin-top: .5em;
+	}

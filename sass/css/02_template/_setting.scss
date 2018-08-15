@@ -1,0 +1,96 @@
+@charset "utf-8";
+////変数
+
+// min-width MBファースト
+$breakpoint-up: (
+  'sm': 'screen and (min-width: 576px)',
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 992px)',
+  'xl': 'screen and (min-width: 1200px)',
+) !default;
+
+// max-width PCファースト
+$breakpoint-down: (
+  'xl': 'screen and (max-width: 1200px)',
+  'lg': 'screen and (max-width: 992px)',
+  'md': 'screen and (max-width: 768px)',
+  'sm': 'screen and (max-width: 576px)',
+) !default;
+
+// PCコンテナ幅
+$container-widths-down: (
+  'sm': 540px,
+  'md': 720px,
+  'lg': 960px,
+  'xl': 1140px
+) !default;
+$container-widths-up: (
+  'sm': 600px,
+  'md': 800px,
+  'lg': 1020px,
+  'xl': 1280px
+) !default;
+$base-width: 1280px !default;
+$grid-gutter-width: 30px !default;
+$grid-columns: 12 !default;
+
+//相対色
+$clr-bases: (
+//	'primary': '#',
+//	'secondary': '#',
+
+) !default;
+
+//固定色
+$clr-list: (
+	wt: #fff,
+	bk: #000,
+	gy: #aaa,
+	rd: #f00,
+	gr: #0f0,
+	bl: #00f,
+) !default;
+
+$font-weight: (
+	n: normal,
+	b: bold,
+	t: thin,
+) !default;
+
+$text-align: (
+	l: left,
+	c: center,
+	r: right,
+) !default;
+
+
+
+@mixin mq-up($breakpoint: md) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-all {
+    @each $value in map-values($breakpoint-down) {
+        @media #{$value} {
+            @content;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

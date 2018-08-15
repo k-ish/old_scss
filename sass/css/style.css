@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+p {
+  clear: both;
+}
+
+.bg-wt {
+  background-color: #fff;
+}
+
+.bg-bk {
+  background-color: #000;
+}
+
+.bg-gy {
+  background-color: #aaa;
+}
+
+.bg-rd {
+  background-color: #f00;
+}
+
+.bg-gr {
+  background-color: #0f0;
+}
+
+.bg-bl {
+  background-color: #00f;
+}
+
+@media screen and (max-width: 1200px) {
+  .bg-wt-xl {
+    background-color: #fff;
+  }
+
+  .bg-bk-xl {
+    background-color: #000;
+  }
+
+  .bg-gy-xl {
+    background-color: #aaa;
+  }
+
+  .bg-rd-xl {
+    background-color: #f00;
+  }
+
+  .bg-gr-xl {
+    background-color: #0f0;
+  }
+
+  .bg-bl-xl {
+    background-color: #00f;
+  }
+}
+@media screen and (max-width: 992px) {
+  .bg-wt-lg {
+    background-color: #fff;
+  }
+
+  .bg-bk-lg {
+    background-color: #000;
+  }
+
+  .bg-gy-lg {
+    background-color: #aaa;
+  }
+
+  .bg-rd-lg {
+    background-color: #f00;
+  }
+
+  .bg-gr-lg {
+    background-color: #0f0;
+  }
+
+  .bg-bl-lg {
+    background-color: #00f;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bg-wt-md {
+    background-color: #fff;
+  }
+
+  .bg-bk-md {
+    background-color: #000;
+  }
+
+  .bg-gy-md {
+    background-color: #aaa;
+  }
+
+  .bg-rd-md {
+    background-color: #f00;
+  }
+
+  .bg-gr-md {
+    background-color: #0f0;
+  }
+
+  .bg-bl-md {
+    background-color: #00f;
+  }
+}
+@media screen and (max-width: 576px) {
+  .bg-wt-sm {
+    background-color: #fff;
+  }
+
+  .bg-bk-sm {
+    background-color: #000;
+  }
+
+  .bg-gy-sm {
+    background-color: #aaa;
+  }
+
+  .bg-rd-sm {
+    background-color: #f00;
+  }
+
+  .bg-gr-sm {
+    background-color: #0f0;
+  }
+
+  .bg-bl-sm {
+    background-color: #00f;
+  }
+}
